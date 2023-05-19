@@ -1,5 +1,8 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
+plugins{
+    id 'com.android.application'
+    id 'kotlin-android'
+    id("org.sonarqube") version "4.0.0.2929"
+}
 
 android {
     compileSdkVersion 33
@@ -36,6 +39,14 @@ android {
         viewBinding = true
     }
     namespace 'com.darkempire78.opencalculator'
+}
+
+sonarqube {
+    properties {
+        property("sonar.projectKey", "Parthasarathyelumalai_open_source_glide")
+        property("sonar.organization", "parthasarathyelumalai")
+        property("sonar.host.url", "https://sonarcloud.io")
+    }
 }
 
 dependencies {
