@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         view = binding.root
         setContentView(view)
-
+        binding.root.tag = "Data"
         // Disable the keyboard on display EditText
         binding.input.showSoftInputOnFocus = false
 
